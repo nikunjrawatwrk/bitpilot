@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #30363d transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #30363d;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-bb-blue hover:bg-bb-blue-hover text-white px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+  }
+  .btn-danger {
+    @apply bg-bb-red/20 hover:bg-bb-red/30 text-bb-red border border-bb-red/30 px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+  }
+  .btn-success {
+    @apply bg-bb-green/20 hover:bg-bb-green/30 text-bb-green border border-bb-green/30 px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+  }
+  .btn-ghost {
+    @apply hover:bg-bb-elevated text-bb-text-secondary hover:text-bb-text-primary px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+  }
+  .card {
+    @apply bg-bb-surface border border-bb-border rounded-xl;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-open {
+    @apply badge bg-bb-blue/20 text-bb-blue;
+  }
+  .badge-merged {
+    @apply badge bg-bb-purple/20 text-bb-purple;
+  }
+  .badge-declined {
+    @apply badge bg-bb-red/20 text-bb-red;
+  }
+  .input {
+    @apply bg-bb-dark border border-bb-border rounded-lg px-4 py-2 text-bb-text-primary placeholder-bb-text-secondary focus:outline-none focus:ring-2 focus:ring-bb-blue/50 focus:border-bb-blue transition-colors;
+  }
+}
+
+.diff-add {
+  background-color: rgba(46, 160, 67, 0.15);
+}
+.diff-del {
+  background-color: rgba(248, 81, 73, 0.15);
+}
+.diff-hunk {
+  background-color: rgba(38, 132, 255, 0.1);
+  color: #8b949e;
+}
+
+/* Onboarding wizard animations */
+@keyframes ob-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes ob-slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ob-slide-in-right {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ob-slide-in-left {
+  from { opacity: 0; transform: translateX(-48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ob-scale-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes ob-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes ob-pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.6; }
+  100% { transform: scale(1.6);  opacity: 0; }
+}
+@keyframes ob-check {
+  from { stroke-dashoffset: 60; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes ob-spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.ob-fade-in      { animation: ob-fade-in      0.4s ease both; }
+.ob-slide-up     { animation: ob-slide-up     0.5s cubic-bezier(.22,1,.36,1) both; }
+.ob-slide-right  { animation: ob-slide-in-right 0.45s cubic-bezier(.22,1,.36,1) both; }
+.ob-slide-left   { animation: ob-slide-in-left  0.45s cubic-bezier(.22,1,.36,1) both; }
+.ob-scale-in     { animation: ob-scale-in     0.4s cubic-bezier(.22,1,.36,1) both; }
+.ob-float        { animation: ob-float        3s ease-in-out infinite; }
+.ob-pulse-ring   { animation: ob-pulse-ring   1.4s ease-out infinite; }
+.ob-spin-slow    { animation: ob-spin-slow    8s linear infinite; }
+
+.ob-delay-1 { animation-delay: 0.1s; }
+.ob-delay-2 { animation-delay: 0.2s; }
+.ob-delay-3 { animation-delay: 0.3s; }
+.ob-delay-4 { animation-delay: 0.4s; }
+.ob-delay-5 { animation-delay: 0.5s; }
+.ob-delay-6 { animation-delay: 0.6s; }
