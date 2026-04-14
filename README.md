@@ -55,6 +55,30 @@ Teen AI providers support karta hai:
 
 ---
 
+## 📸 Screenshots
+
+### Dashboard — Repositories
+![Dashboard](screen-shot-4.png)
+Browse all your Bitbucket workspace repositories from one clean dashboard with search and auto-refresh.
+
+### PR List — Codebase Intelligence
+![PR List](screen-shot-5.png)
+View Open / Merged / Declined PRs per repo. Index the codebase once to make every AI review project-aware.
+
+### PR Review — AI Findings
+![PR Review AI](screen-shot-2.png)
+AI review findings grouped by severity — Critical, High, Medium, Low — with file, line, description, and suggested fix. Select which findings to post as Bitbucket comments directly.
+
+### PR Review — Deployment Timer
+![PR Review Deploy](screen-shot-3.png)
+After merging, a 16-minute staging countdown starts automatically. Notification sent via Zoho Cliq / webhook when deploy is expected to be live.
+
+### Configuration
+![Configuration](screen-shot-1.png)
+One-page settings for Bitbucket credentials, AI provider selection (OpenAI / Claude API / Claude CLI), Zoho Cliq notifications, Generic Webhook, and Auto Refresh interval.
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Apne project ke root mein clone karo
